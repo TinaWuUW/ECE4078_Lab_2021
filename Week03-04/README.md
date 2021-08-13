@@ -6,6 +6,7 @@
     - [Calibration (week 3)](#Calibration-week-3)
     - [SLAM (week 4)](#SLAM-week-4)
 - [Marking](#Marking)
+- [Technical FAQs](#FAQs-M2)
 
 
 ## Introduction
@@ -114,3 +115,13 @@ You will be evaluated based on the RMSE after alignment (done in simulation), an
 Your M2 score is calculated as (0.1-Aligned_RMSE)*800 + live_demo_score (if your Aligned RMSE is bigger than 0.1 then your simulator-based evaluation score would be 0). For example, if your RMSE after alignment is 0.06 in the simulator-based evaluation, and you have found 9 out of 10 markers in the live demo, then your final score for M2 will be (0.1-0.06)*800+18 = 50.
 
 *If the evaluation is carried out in a hybrid lab:* You will be awarded a 10pt bonus if you can demonstrate your solution on the physical robot. Max M2 score is 100pts.
+
+## FAQs: M2
+- If you are using Mac to run the VM and are encountering performance issues, please follow the steps in [this link](https://www.reddit.com/r/virtualbox/comments/houi9k/how_to_fix_virtualbox_61_running_slow_on_mac/) 
+- Refer to the comments in each of the [calibrateWheelRadius](calibration/wheel_calibration.py#L10) and [calibrateBaseline](calibration/wheel_calibration.py#L52) functions for what each of these values corresponds to on the physical robot
+- Take a close look at the units of the expected output when formulating your calculations. Referring to these equations may be helpful:
+
+![Useful equations for calculating baseline](screenshots/AngularVelocity.png?raw=true "Useful equations for calculating baseline")
+
+- It is recommended that you keep the file structure for this lab material (and future weeks) unchanged to avoid path errors
+- Remember to reach out via Slack if you encounter issues with your VM between lab sessions
