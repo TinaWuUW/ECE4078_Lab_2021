@@ -125,3 +125,6 @@ Your M2 score is calculated as (0.1-Aligned_RMSE)*800 + live_demo_score (if your
 
 - It is recommended that you keep the file structure for this lab material (and future weeks) unchanged to avoid path errors
 - Remember to reach out via Slack if you encounter issues with your VM between lab sessions
+- Beware of the sign error that can happen with calculating the difference between the measurement and estimate in the correction step
+- The state vector x will be appended with the aruco-marker measurements. Take a note of the location of x that should be updated in the motion model.
+- In the prediction step, we should update the mean belief by driving the robot.
