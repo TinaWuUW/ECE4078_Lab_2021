@@ -4,7 +4,7 @@
     - [SLAM helper scripts](#SLAM-helper-scripts)
 - [Activities](#Activities)
     - [Calibration (week 3)](#Calibration-week-3)
-    - [SLAM (week 4)](#SLAM-week-4)
+    - [SLAM (week 4-5)](#SLAM-week-4-5)
 - [Marking](#Marking)
 - [Technical FAQs](#FAQs-M2)
 
@@ -87,7 +87,7 @@ You will now need to calibrate the camera parameters, using using [camera_calibr
 Run the script using the command ```python3 camera_calibration.py```. This opens the calibration photo you just took. Selecting the 8 key points in the calibration photo following the ordering shown in [calibration-fixture.png](calibration/calibration-fixture.png) by left clicking on each point (right click to cancel a selected point). Once all 8 points are selected, close the figure window to compute the camera matrix. This will update the [intrinsic parameters](calibration/param/intrinsic.txt). Note: keep the [distortion coefficients](calibration/param/distCoeffs.txt) to all 0s.
 
 
-### SLAM (week 4)
+### SLAM (week 4-5)
 [operate.py](operate.py) makes use of the camera and wheels' [calibrated parameters](calibration/param) and the [SLAM](slam/) components to produce a map saved as "slam.txt" in the lab_output folder. This SLAM map contains a list of identified ARUCO makers, their locations and the covariances of the estimation. Note: remember to replace the [keyboard control section](operate.py#L194) with your codes from M1.
 
 [SLAM](slam/ekf.py) computes the locations of the ARUCO markers using both [camera based estimation](slam/aruco_detector.py) and [motion model based estimation](slam/robot.py).
